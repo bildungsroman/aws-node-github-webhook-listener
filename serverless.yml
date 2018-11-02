@@ -6,9 +6,10 @@ provider:
     GITHUB_WEBHOOK_SECRET: wow-sls-this-is-bad
 functions:
   githubWebhookListener:
-    handler: handler.githubWebhookListener
+    handler: index.handler
     events:
       - http:
           path: webhook
           method: post
           cors: true
+    runtime: nodejs8.10
