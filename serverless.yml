@@ -1,11 +1,9 @@
 service: aws-node-github-webhook-listener
-
 provider:
   name: aws
   runtime: nodejs6.10
   environment:
     GITHUB_WEBHOOK_SECRET: wow-sls-this-is-bad
-
 functions:
   githubWebhookListener:
     handler: handler.githubWebhookListener
